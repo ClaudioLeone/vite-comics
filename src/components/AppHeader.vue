@@ -29,5 +29,22 @@
 </template>
 
 <style scoped lang="scss">
+@mixin flex($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
 
+.header {
+    @include flex(row, center, center);
+
+    .list-container {
+        @include flex(row, center, center);
+        ul {
+            @include flex(row, center, center);
+            list-style-type: none;
+        }
+    }
+}
 </style>
