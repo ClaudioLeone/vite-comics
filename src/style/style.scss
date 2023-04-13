@@ -1,5 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+@mixin flex($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin containerWdt($wdtValue) {
+    width: $wdtValue;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #1C1C1C;
+}
+
