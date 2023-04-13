@@ -24,6 +24,6 @@ export default {
 </template>
 
 <style lang="scss">
-@use "./style/style.scss"
+@use "./style/style.scss" as *;
 
 </style>
