@@ -17,12 +17,11 @@
 
 <template>
     <div class="header-bg">
-        <div class="header">
+        <div class="logo">
+            <img :src="getLogoImg(logoImg)" alt="DC-logo">
+        </div>
 
-            <div class="logo">
-                <img :src="getLogoImg(logoImg)" alt="DC-logo">
-            </div>
-        
+        <div class="header">
             <div class="list-container">
                 <ul>
                     <li v-for="(item, index) in navList"  :key="index"><strong>{{ item }}</strong></li>
@@ -36,6 +35,8 @@
 @use "../style/style.scss" as *;
 @use "../style/colors.scss" as *;
 .header-bg {
+    display: flex;
+    justify-content: center;
     height: var(--headerHeight);
     width: 100%;
     background-color: white;
@@ -44,10 +45,12 @@
         height: var(--headerHeight);
         @include flex(row, space-between, center);
         @include containerWdt(80%);
-        margin: 0 auto;
     }
     .logo {
         width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center
     }
 
     .list-container {
