@@ -25,7 +25,7 @@
         
             <div class="list-container">
                 <ul>
-                    <li v-for="(item, index) in navList"  :key="index">{{ item }}</li>
+                    <li v-for="(item, index) in navList"  :key="index"><strong>{{ item }}</strong></li>
                 </ul>
             </div>
         </div>

@@ -101,6 +101,9 @@ export default {
     <div class="flex-wrap stretch">
       <DcCard v-for="(comic, index) in comics" :thumb="comic.thumb" :series="comic.series" :key="index"/>
     </div>
+    <div class="loadMore-btn">
+      <button><strong>LOAD MORE</strong></button>
+    </div>
     </section>
   
   <AppCta />
@@ -111,5 +114,22 @@ export default {
 
 .stretch {
   align-items: stretch;
+}
+
+.loadMore-btn {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.loadMore-btn > button {
+  padding: 5px 15px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #0282F9;
+  border: none;
+  cursor: pointer;
+}
+.loadMore-btn > button:hover{
+  background-color: #0A63BD;
 }
 </style>
