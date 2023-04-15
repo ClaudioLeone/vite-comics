@@ -28,7 +28,7 @@
     .container {
     @include containerWdt(80%);
     @include flex(row, left, center);
-    height: 215px;
+    height: 250px;
     margin: 0 auto;
     color: white;
 }

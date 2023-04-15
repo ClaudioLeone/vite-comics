@@ -2,12 +2,14 @@
 import AppHeader from './components/AppHeader.vue';
 import AppJumbo from './components/AppJumbo.vue';
 import AppCta from './components/AppCta.vue';
+import DcCard from './components/DcCard.vue';
 
 export default {
   components: {                                 
     AppHeader,
     AppJumbo,
-    AppCta
+    AppCta,
+    DcCard
   },
 
   data() {
@@ -94,6 +96,13 @@ export default {
 <template>
   <AppHeader />
   <AppJumbo />
+  
+  <section class="card-container">
+    <div class="flex-wrap">
+      <DcCard v-for="(comic, index) in comics" :thumb="comic.thumb" :series="comic.series" :key="index"/>
+    </div>
+    </section>
+  
   <AppCta />
 </template>
 
