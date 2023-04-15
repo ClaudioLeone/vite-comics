@@ -87,6 +87,33 @@ export default {
           series: 'Catwoman',
           type: 'graphic novel',
         },
+      ],
+      ctaIcons: [
+        {
+          src: "../src/assets/img/buy-comics-digital-comics.png",
+          img: "buy-comics-digital-comics.png",
+          title: "DIGITAL COMICS"
+        },
+        {
+          src: "../src/assets/img/buy-comics-merchandise.png",
+          img: "buy-comics-merchandise.png",
+          title: "DC MERCHANDISE"
+        },
+        {
+          src: "../src/assets/img/buy-comics-subscriptions.png",
+          img: "buy-comics-subscriptions.png",
+          title: "SUBSCRIPTION"
+        },
+        {
+          src: "../src/assets/img/buy-comics-shop-locator.png",
+          img: "buy-comics-shop-locator.png",
+          title: "COMIC SHOP LOCATOR"
+        },
+        {
+          src: "../src/assets/img/buy-dc-power-visa.svg",
+          img: "buy-dc-power-visa.svg",
+          title: "DC POWER VISA"
+        }
       ]
     }
   }
@@ -104,13 +131,23 @@ export default {
     <div class="loadMore-btn">
       <button><strong>LOAD MORE</strong></button>
     </div>
-    </section>
+  </section>
   
-  <AppCta />
+  <section>
+    <div class="cta-container flex">
+        <div class="cta-box container flex">
+          <AppCta v-for="(icon, index) in ctaIcons" :key="index" :src="icon.src" :title="icon.title"/>
+        </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
 @use "./style/style.scss" as *;
+
+.flex {
+  display: flex;
+}
 
 .stretch {
   align-items: stretch;
@@ -132,5 +169,20 @@ export default {
 }
 .loadMore-btn > button:hover{
   background-color: #0A63BD;
+}
+
+.cta-container {
+  background-color: #0282F9;
+  align-items: center;
+
+  .cta-box {
+    justify-content: space-between
+  }
+
+  .container {
+    @include containerWdt(80%);
+    height: 150px;
+    margin: 0 auto;
+  }
 }
 </style>

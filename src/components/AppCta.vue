@@ -1,6 +1,11 @@
 <script>
     export default {
         name: 'AppCta',
+        props: {
+            src: String,
+            img: String,
+            title: String
+        },
         data() {
             return {
                 
@@ -10,20 +15,31 @@
 </script>
 
 <template>
-    <div class="jumbo">
-        <div class="container"></div>
+    <div class="merch-card flex">
+        <img :src="src" :alt="img">
+        <h4>{{ title }}</h4>
     </div>
 </template>
 
 <style scoped lang="scss">
 @use "../style/style.scss" as *;
-.jumbo {
-    background-color: #0282F9;
 
-    .container {
-        @include containerWdt(80%);
-        height: 150px;
-        margin: 0 auto;
-    }
+.flex {
+    display: flex;
+}
+
+.merch-card {
+    width: calc(100% / 6 - 5px);
+    align-items: center;
+    justify-content: space-between;
+}
+.merch-card > img {
+    width: 50%;
+    height: 60px;
+}
+
+.merch-card > h4 {
+    font-size: 0.6rem;
+    margin-left: 5px;
 }
 </style>
