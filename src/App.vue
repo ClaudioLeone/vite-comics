@@ -108,5 +108,4 @@ export default {
 
 <style lang="scss">
 @use "./style/style.scss" as *;
-
 </style>
