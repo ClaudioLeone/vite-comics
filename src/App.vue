@@ -98,7 +98,7 @@ export default {
   <AppJumbo />
   
   <section class="card-container">
-    <div class="flex-wrap">
+    <div class="flex-wrap stretch">
       <DcCard v-for="(comic, index) in comics" :thumb="comic.thumb" :series="comic.series" :key="index"/>
     </div>
     </section>
@@ -108,4 +108,8 @@ export default {
 
 <style lang="scss">
 @use "./style/style.scss" as *;
+
+.stretch {
+  align-items: stretch;
+}
 </style>

@@ -19,10 +19,16 @@
 
 <style scoped lang="scss">
     .card {
-        display: inline-block;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: calc((100% / 6) - 10px);
         padding: 5px;
-        border: 1px solid black
+        margin: 5px 0;
+    }
+    .card:hover {
+        background-color: #0282F9;
     }
 
     h3 {
