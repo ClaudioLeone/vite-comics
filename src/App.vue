@@ -3,13 +3,15 @@ import AppHeader from './components/AppHeader.vue';
 import AppJumbo from './components/AppJumbo.vue';
 import AppCta from './components/AppCta.vue';
 import DcCard from './components/DcCard.vue';
+import AppBottomLinks from './components/AppBottomLinks.vue';
 
 export default {
   components: {                                 
     AppHeader,
     AppJumbo,
     AppCta,
-    DcCard
+    DcCard,
+    AppBottomLinks
   },
 
   data() {
@@ -140,6 +142,10 @@ export default {
         </div>
     </div>
   </section>
+
+  <section class="bottom-page">
+    <AppBottomLinks />
+  </section>
 </template>
 
 <style lang="scss">
@@ -184,5 +190,10 @@ export default {
     height: 150px;
     margin: 0 auto;
   }
+}
+
+.bottom-page {
+  background-image: url(./assets/img/footer-bg.jpg);
+  object-fit: cover;
 }
 </style>

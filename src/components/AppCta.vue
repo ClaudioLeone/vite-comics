@@ -36,8 +36,8 @@
     cursor: pointer;
 }
 .merch-card > img {
-    width: 50%;
-    height: 60px;
+    width: 40%;
+    height: 50px;
 }
 
 .merch-card > h4 {
